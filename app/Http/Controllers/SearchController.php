@@ -15,6 +15,11 @@ class SearchController extends Controller
         $data = $request->validated();
         $price = app(RetrievePrice::class)->execute($data);
 
-        return redirect()->back()->with(compact('price'));
+        $from = formatDateTime($data['date_from']);
+        $to = formatDateTime($data['date_to']);
+        
+        $header = "Result: From '$from' to '$to'";
+
+        return redirect()->back()->with(compact('price', 'header'));
     }
 }

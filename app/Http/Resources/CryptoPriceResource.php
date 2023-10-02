@@ -16,9 +16,9 @@ class CryptoPriceResource extends JsonResource
     {
         return [
             'lowest_market_price'   => $this->lowest_market_price,
-            'lowest_close_time'     => $this->lowest_close_time,
+            'lowest_close_time'     => formatDateTime($this->lowest_close_time),
             'highest_market_price'  => $this->highest_market_price,
-            'highest_close_time'    => $this->highest_close_time
+            'highest_close_time'    => formatDateTime($this->highest_close_time)
         ];
     }
 

@@ -39,6 +39,7 @@
                         </form>
                         <br>
                         @if (session()->has('price'))
+                        <p>{{ session('header') }}</p>
                         <table class="table-fixed">
                             <thead>
                                 <tr>
@@ -51,9 +52,9 @@
                             <tbody>
                                 <tr>
                                     <td class="border px-4 py-2">{{ session('price')['lowest_market_price'] }}</td>
-                                    <td class="border px-4 py-2">{{ session('price')['lowest_close_time'] }}</td>
+                                    <td class="border px-4 py-2">{{ formatDateTime(session('price')['lowest_close_time']) }}</td>
                                     <td class="border px-4 py-2">{{ session('price')['highest_market_price'] }}</td>
-                                    <td class="border px-4 py-2">{{ session('price')['highest_close_time'] }}</td>
+                                    <td class="border px-4 py-2">{{ formatDateTime(session('price')['highest_close_time']) }}</td>
                                 </tr>
                             </tbody>
                         </table>                          
