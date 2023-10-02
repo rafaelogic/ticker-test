@@ -1,3 +1,4 @@
+<img width="743" alt="image" src="https://github.com/rafaelogic/ticker-test/assets/5935096/4695033e-8d24-4219-bd4d-013298a3af85">
 
 # Prerequisite
 1. PHP 8.2
